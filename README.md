@@ -486,3 +486,89 @@ void drawcard(int x,int y,String face)
   text(face,x+10,y+40);
 }
 ```
+## 4-1 圓圈=>直線
+```c++
+void setup()
+
+{
+
+  size(600,600);
+
+}
+
+
+
+int x=300,y=300;
+
+
+
+void draw()
+
+{
+
+  ellipse(x,y,5,5);
+
+  x+=1;
+
+  y-=1;
+
+}
+```
+## 4-2 反彈
+```c++
+void setup()
+
+{
+
+  size(600,600);
+
+}
+
+
+
+float x=300,y=300;
+
+float vx=1.0,vy=-0.5;
+
+
+
+void draw()
+
+{
+
+  ellipse(x,y,20,20);
+
+  x+=vx;
+
+  y+=vy;
+
+  if(x>600|x<0)vx=-vx;
+
+  if(y<0|y>600)vy=-vy;
+
+
+}
+```
+## 4-3 板子反彈
+```c++
+void setup()
+{
+  size(600,600);
+}
+
+float x=300,y=300;
+float vx=3.0,vy=-2.5;
+
+void draw()
+{
+  background(#FFFFF2);
+  int boardx=mouseX;
+  rect(boardx,570,250,20);
+  ellipse(x,y,20,20);
+  x+=vx;
+  y+=vy;
+  if(x>600|x<0)vx=-vx;
+  if(y<0)vy=-vy;
+  if(y>570 && x>boardx && x<boardx+250) vy=-vy;
+}
+```
