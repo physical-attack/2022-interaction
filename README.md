@@ -955,3 +955,8 @@ void mousePressed()
   }
 }
 ```
+## 5-6 移動
+```c++
+![image](https://user-images.githubusercontent.com/79628384/193526873-22304386-a714-4234-80de-c58aea4a9d00.png)
+
+```
