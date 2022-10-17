@@ -1182,9 +1182,9 @@ void drawchess(int x,int y,int id)
 }
 ```
 # week07
-## 1-1 04fu6
-
-‵++int [][]show={
+## 7-1 暗棋
+```c++
+int [][]show={
   {0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0},
@@ -1277,3 +1277,4 @@ void drawchess(int x,int y,int id)
     text(name2[-id-1],x,y-3);
   }
 }
+```
