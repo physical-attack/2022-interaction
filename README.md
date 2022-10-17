@@ -1646,7 +1646,7 @@ void drawchess(int x,int y,int id)
   }
 }
 ```
-## 7-5、6
+## 7-5、6 播放音樂()
 ```c++
 ///save, mp3 drag here
 ///ctrl+k to view file
