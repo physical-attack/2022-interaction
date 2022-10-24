@@ -1848,3 +1848,76 @@ void mousePressed()
   fruit.reset();
 }
 ```
+## 8-5 字母(新增分頁)
+```c++
+FRUIT [] fruits;
+void setup()
+{
+  size(400,300);
+  fruits =new FRUIT[3];
+  
+  for(int i=0;i<3;i++)
+  {
+    fruits[i]=new FRUIT(this);///使random 可使用的修改
+  }
+}
+
+void draw()
+{
+  background(255,0,255);
+  for(int i=0;i<3;i++)
+  {
+    fill(255);
+    ellipse(fruits[i].x,fruits[i].y,50,50);
+    textSize(30);
+    textAlign(CENTER,CENTER);
+    fill(0);
+    text(fruits[i].c,fruits[i].x,fruits[i].y);
+    fruits[i].update();
+  }
+}
+
+void mousePressed()
+{
+  for(int i=0;i<3;i++)
+  {
+    if(keyCode == fruits[i].c)
+    {
+      fruits[i].reset();
+    }
+  }
+}
+```
+```c++
+String line="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+class FRUIT
+{
+  float x,y,vx,vy;
+  boolean fly;
+  char c;
+  PApplet sketch;
+  FRUIT(PApplet _sketch)
+  {
+    sketch= _sketch;
+    reset();
+  }
+  
+  void reset()
+  {
+    x=sketch.random(100.0,300.0);///使random 可使用的修改
+    y=300;
+    vx=sketch.random(-2,2);///使random 可使用的修改
+    vy=-13;
+    fly=true;
+    int i=int(random(26));
+    c=line.charAt(i);
+  }
+  
+  void update()
+  {
+    x+=vx;
+    y+=vy;
+    vy+=0.98/3;
+  }
+}
+```
