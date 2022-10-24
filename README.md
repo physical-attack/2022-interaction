@@ -1688,7 +1688,7 @@ void keyPressed()
 }
 ```
 # week08
-## 8-1
+## 8-1 切換音樂
 ```c++
 import processing.sound.*;
 SoundFile sound1,s2,s3;
