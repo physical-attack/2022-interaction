@@ -1850,6 +1850,7 @@ void mousePressed()
 ```
 ## 8-5 字母(新增分頁)
 ```c++
+1
 FRUIT [] fruits;
 void setup()
 {
@@ -1888,6 +1889,7 @@ void mousePressed()
   }
 }
 ```
+2
 ```c++
 String line="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 class FRUIT
